@@ -2,8 +2,9 @@
 
 from __future__ import annotations
 
+from collections.abc import Callable
 from dataclasses import dataclass
-from typing import Any, Callable
+from typing import Any
 
 from homeassistant.components.sensor import (
     SensorDeviceClass,
@@ -12,10 +13,7 @@ from homeassistant.components.sensor import (
     SensorStateClass,
 )
 from homeassistant.config_entries import ConfigEntry
-from homeassistant.const import (
-    PERCENTAGE,
-    UnitOfPower,
-)
+from homeassistant.const import PERCENTAGE, UnitOfPower
 from homeassistant.core import HomeAssistant
 from homeassistant.helpers.entity_platform import AddEntitiesCallback
 
@@ -33,7 +31,6 @@ class LGESSSensorDescription(SensorEntityDescription):
 
 
 SENSORS: tuple[LGESSSensorDescription, ...] = (
-
     LGESSSensorDescription(
         key="battery_soc",
         name="Battery SoC",
@@ -41,7 +38,6 @@ SENSORS: tuple[LGESSSensorDescription, ...] = (
         device_class=SensorDeviceClass.BATTERY,
         value_fn=lambda d: d.soc,
     ),
-
     LGESSSensorDescription(
         key="battery_power",
         name="Battery Power",
@@ -50,14 +46,12 @@ SENSORS: tuple[LGESSSensorDescription, ...] = (
         state_class=SensorStateClass.MEASUREMENT,
         value_fn=lambda d: d.battery_power,
     ),
-
     LGESSSensorDescription(
         key="battery_status",
         name="Battery Status",
         icon="mdi:battery-heart",
         value_fn=lambda d: d.battery_status,
     ),
-
     LGESSSensorDescription(
         key="pv_power",
         name="PV Power",
@@ -66,7 +60,6 @@ SENSORS: tuple[LGESSSensorDescription, ...] = (
         state_class=SensorStateClass.MEASUREMENT,
         value_fn=lambda d: d.pv_power,
     ),
-
     LGESSSensorDescription(
         key="home_load",
         name="Home Load",
@@ -75,7 +68,6 @@ SENSORS: tuple[LGESSSensorDescription, ...] = (
         state_class=SensorStateClass.MEASUREMENT,
         value_fn=lambda d: d.load_power,
     ),
-
     LGESSSensorDescription(
         key="grid_power",
         name="Grid Power",
@@ -84,7 +76,6 @@ SENSORS: tuple[LGESSSensorDescription, ...] = (
         state_class=SensorStateClass.MEASUREMENT,
         value_fn=lambda d: d.grid_power,
     ),
-
     LGESSSensorDescription(
         key="grid_import",
         name="Grid Import",
@@ -93,7 +84,6 @@ SENSORS: tuple[LGESSSensorDescription, ...] = (
         state_class=SensorStateClass.MEASUREMENT,
         value_fn=lambda d: d.grid_import,
     ),
-
     LGESSSensorDescription(
         key="grid_export",
         name="Grid Export",
@@ -102,7 +92,6 @@ SENSORS: tuple[LGESSSensorDescription, ...] = (
         state_class=SensorStateClass.MEASUREMENT,
         value_fn=lambda d: d.grid_export,
     ),
-
 )
 
 
