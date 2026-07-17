@@ -1,0 +1,14 @@
+# Default owner for the entire repository
+* @<YOUR_GITHUB_USERNAME>
+
+# GitHub workflows
+.github/ @<YOUR_GITHUB_USERNAME>
+
+# Home Assistant integration
+custom_components/lgess/ @<YOUR_GITHUB_USERNAME>
+
+# Tests
+tests/ @<YOUR_GITHUB_USERNAME>
+
+# Documentation
+*.md @<YOUR_GITHUB_USERNAME>

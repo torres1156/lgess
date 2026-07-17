@@ -1,0 +1,34 @@
+# Textdateien immer mit LF speichern
+* text=auto eol=lf
+
+# Python
+*.py text
+
+# Markdown
+*.md text
+
+# JSON
+*.json text
+
+# YAML
+*.yaml text
+*.yml text
+
+# XML
+*.xml text
+
+# Shell
+*.sh text eol=lf
+
+# Windows Scripts
+*.bat text eol=crlf
+*.cmd text eol=crlf
+
+# Binärdateien
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.svg binary
+*.pdf binary

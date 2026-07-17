@@ -1,0 +1,23 @@
+{
+  "title": "LG ESS Local",
+  "config": {
+    "step": {
+      "user": {
+        "title": "Connect to LG ESS",
+        "description": "Configure the connection to the LG ESS.",
+        "data": {
+          "host": "Host",
+          "password": "Installer password"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Cannot connect to LG ESS.",
+      "invalid_auth": "Invalid installer password.",
+      "unknown": "Unknown error."
+    },
+    "abort": {
+      "already_configured": "This LG ESS is already configured."
+    }
+  }
+}

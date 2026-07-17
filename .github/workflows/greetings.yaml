@@ -1,0 +1,31 @@
+name: Greetings
+
+on:
+  issues:
+    types: [opened]
+  pull_request_target:
+    types: [opened]
+
+permissions:
+  issues: write
+  pull-requests: write
+
+jobs:
+  greeting:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/first-interaction@v2
+        with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+
+          issue-message: |
+            👋 Thank you for opening your first issue for **LG ESS Local**!
+
+            We appreciate your feedback.
+            Please include your Home Assistant version, integration version and any relevant logs.
+
+          pr-message: |
+            👋 Thank you for your first contribution to **LG ESS Local**!
+
+            Your pull request will be reviewed as soon as possible.

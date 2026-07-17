@@ -1,0 +1,10 @@
+blank_issues_enabled: false
+
+contact_links:
+  - name: Questions & Discussions
+    url: https://github.com/<YOUR_GITHUB_USERNAME>/lgess/discussions
+    about: Please use GitHub Discussions for questions, ideas and general support.
+
+  - name: Home Assistant Community
+    url: https://community.home-assistant.io/
+    about: Ask questions and discuss Home Assistant with the community.

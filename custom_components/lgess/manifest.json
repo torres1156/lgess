@@ -1,0 +1,18 @@
+{
+  "domain": "lgess",
+  "name": "LG ESS Local",
+  "version": "0.1.0",
+  "config_flow": true,
+  "integration_type": "hub",
+  "iot_class": "local_polling",
+  "documentation": "https://github.com/torstenschlosser/lgess",
+  "issue_tracker": "https://github.com/torstenschlosser/lgess/issues",
+  "requirements": [],
+  "dependencies": [],
+  "codeowners": [
+    "@torstenschlosser"
+  ],
+  "loggers": [
+    "custom_components.lgess"
+  ]
+}
