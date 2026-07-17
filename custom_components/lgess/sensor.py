@@ -104,10 +104,7 @@ async def async_setup_entry(
 
     coordinator: LGESSCoordinator = hass.data[DOMAIN][entry.entry_id]
 
-    async_add_entities(
-        LGESSSensor(coordinator, description)
-        for description in SENSORS
-    )
+    async_add_entities(LGESSSensor(coordinator, description) for description in SENSORS)
 
 
 class LGESSSensor(LGESSEntity, SensorEntity):
@@ -123,14 +120,10 @@ class LGESSSensor(LGESSEntity, SensorEntity):
         super().__init__(coordinator)
 
         self.entity_description = description
-        self._attr_unique_id = (
-            f"{coordinator.api.unique_id}_{description.key}"
-        )
+        self._attr_unique_id = f"{coordinator.api.unique_id}_{description.key}"
         self._attr_has_entity_name = True
 
     @property
     def native_value(self):
         """Return sensor value."""
-        return self.entity_description.value_fn(
-            self.coordinator.data
-        )
+        return self.entity_description.value_fn(self.coordinator.data)

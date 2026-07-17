@@ -55,6 +55,4 @@ class LGESSCoordinator(DataUpdateCoordinator[LGESSData]):
             )
 
         except LGESSApiError as err:
-            raise UpdateFailed(
-                f"LG ESS communication failed: {err}"
-            ) from err
+            raise UpdateFailed(f"LG ESS communication failed: {err}") from err
