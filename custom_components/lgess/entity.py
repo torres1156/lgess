@@ -5,7 +5,7 @@ from __future__ import annotations
 from homeassistant.helpers.update_coordinator import CoordinatorEntity
 
 from .coordinator import LGESSCoordinator
-from .device import device_info
+from .device import get_device_info
 
 
 class LGESSEntity(CoordinatorEntity[LGESSCoordinator]):
@@ -20,10 +20,7 @@ class LGESSEntity(CoordinatorEntity[LGESSCoordinator]):
     @property
     def device_info(self):
         """Return device information."""
-        return device_info(
-            self.coordinator.api.unique_id,
-            self.coordinator.api.host,
-        )
+        return get_device_info(self.coordinator)
 
     @property
     def available(self) -> bool:

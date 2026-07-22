@@ -2,7 +2,16 @@
 
 from __future__ import annotations
 
-from .models import LGESSData
+from datetime import datetime
+
+from .models import (
+    LGESSData,
+    LGESSGraphDay,
+    LGESSGraphWeek,
+    LGESSGraphMonth,
+    LGESSGraphYear,
+    LGESSGraphPoint,
+)
 
 
 class LGESSParser:
@@ -19,6 +28,134 @@ class LGESSParser:
             home=home,
             battery=battery,
         )
+
+    @staticmethod
+    def parse_graph_day(data: dict) -> LGESSGraphDay:
+        """Parse PV day history."""
+
+        points: list[LGESSGraphPoint] = []
+
+        for item in data.get("loginfo", []):
+            points.append(
+                LGESSGraphPoint(
+                    time=datetime.strptime(
+                        item["time"],
+                        "%Y%m%d%H%M%S",
+                    ),
+                    generation=LGESSParser.as_int(item.get("generation")),
+                    feed_in=LGESSParser.as_int(item.get("feed_in")),
+                    self_consumption=LGESSParser.as_float(
+                        item.get("self_consum")
+                    ),
+                    total_generation=LGESSParser.as_int(
+                        item.get("total_generation")
+                    ),
+                    total_feed_in=LGESSParser.as_int(
+                        item.get("total_Feed_in")
+                    ),
+                    total_direct_consumption=LGESSParser.as_int(
+                        item.get("total_pv_direct_consumption_energy")
+                    ),
+                )
+            )
+
+        return LGESSGraphDay(points=points)
+
+    @staticmethod
+    def parse_graph_week(data: dict) -> LGESSGraphWeek:
+        """Parse PV week history."""
+
+        points: list[LGESSGraphPoint] = []
+
+        for item in data.get("loginfo", []):
+            points.append(
+                LGESSGraphPoint(
+                    time=datetime.strptime(
+                        item["time"],
+                        "%Y%m%d%H%M%S",
+                    ),
+                    generation=LGESSParser.as_int(item.get("generation")),
+                    feed_in=LGESSParser.as_int(item.get("feed_in")),
+                    self_consumption=LGESSParser.as_float(
+                        item.get("self_consum")
+                    ),
+                    total_generation=LGESSParser.as_int(
+                        item.get("total_generation")
+                    ),
+                    total_feed_in=LGESSParser.as_int(
+                        item.get("total_Feed_in")
+                    ),
+                    total_direct_consumption=LGESSParser.as_int(
+                        item.get("total_pv_direct_consumption_energy")
+                    ),
+                )
+            )
+
+        return LGESSGraphWeek(points=points)
+
+    @staticmethod
+    def parse_graph_month(data: dict) -> LGESSGraphMonth:
+        """Parse PV month history."""
+
+        points: list[LGESSGraphPoint] = []
+
+        for item in data.get("loginfo", []):
+            points.append(
+                LGESSGraphPoint(
+                    time=datetime.strptime(
+                        item["time"],
+                        "%Y%m%d%H%M%S",
+                    ),
+                    generation=LGESSParser.as_int(item.get("generation")),
+                    feed_in=LGESSParser.as_int(item.get("feed_in")),
+                    self_consumption=LGESSParser.as_float(
+                        item.get("self_consum")
+                    ),
+                    total_generation=LGESSParser.as_int(
+                        item.get("total_generation")
+                    ),
+                    total_feed_in=LGESSParser.as_int(
+                        item.get("total_Feed_in")
+                    ),
+                    total_direct_consumption=LGESSParser.as_int(
+                        item.get("total_pv_direct_consumption_energy")
+                    ),
+                )
+            )
+
+        return LGESSGraphMonth(points=points)
+
+    @staticmethod
+    def parse_graph_year(data: dict) -> LGESSGraphYear:
+        """Parse PV year history."""
+
+        points: list[LGESSGraphPoint] = []
+
+        for item in data.get("loginfo", []):
+            points.append(
+                LGESSGraphPoint(
+                    time=datetime.strptime(
+                        item["time"],
+                        "%Y%m%d%H%M%S",
+                    ),
+                    generation=LGESSParser.as_int(item.get("generation")),
+                    feed_in=LGESSParser.as_int(item.get("feed_in")),
+                    self_consumption=LGESSParser.as_float(
+                        item.get("self_consum")
+                    ),
+                    total_generation=LGESSParser.as_int(
+                        item.get("total_generation")
+                    ),
+                    total_feed_in=LGESSParser.as_int(
+                        item.get("total_Feed_in")
+                    ),
+                    total_direct_consumption=LGESSParser.as_int(
+                        item.get("total_pv_direct_consumption_energy")
+                    ),
+                )
+            )
+
+        return LGESSGraphYear(points=points)
 
     @staticmethod
     def as_int(

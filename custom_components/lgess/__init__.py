@@ -33,7 +33,7 @@ async def async_setup_entry(
 ) -> bool:
     """Set up LG ESS from a config entry."""
 
-    _LOGGER.info("Loading LG ESS for %s", entry.data[CONF_HOST])
+    _LOGGER.warning("LGESS: async_setup_entry() reached")
 
     coordinator = LGESSCoordinator(
         hass=hass,
@@ -41,11 +41,13 @@ async def async_setup_entry(
         password=entry.data[CONF_PASSWORD],
     )
 
+    _LOGGER.warning("LGESS: refreshing coordinator")
     await coordinator.async_config_entry_first_refresh()
 
     hass.data.setdefault(DOMAIN, {})
     hass.data[DOMAIN][entry.entry_id] = coordinator
 
+    _LOGGER.warning("LGESS: forwarding platforms")
     await hass.config_entries.async_forward_entry_setups(
         entry,
         PLATFORMS,

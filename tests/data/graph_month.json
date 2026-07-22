@@ -1,0 +1,217 @@
+{
+  "db": "success",
+  "loginfo": [
+    {
+      "db": "0",
+      "feed_in": "172",
+      "generation": "15832",
+      "self_consum": "98",
+      "time": "20260701000000",
+      "total_feed_in": "172",
+      "total_generation": "15832",
+      "total_pv_direct_consumption_energy": "10997"
+    },
+    {
+      "db": "1",
+      "feed_in": "30963",
+      "generation": "59920",
+      "self_consum": "48",
+      "time": "20260702000000",
+      "total_feed_in": "31135",
+      "total_generation": "75752",
+      "total_pv_direct_consumption_energy": "31786"
+    },
+    {
+      "db": "2",
+      "feed_in": "23430",
+      "generation": "44495",
+      "self_consum": "47",
+      "time": "20260703000000",
+      "total_feed_in": "54565",
+      "total_generation": "120247",
+      "total_pv_direct_consumption_energy": "45852"
+    },
+    {
+      "db": "3",
+      "feed_in": "14859",
+      "generation": "35746",
+      "self_consum": "58",
+      "time": "20260704000000",
+      "total_feed_in": "69424",
+      "total_generation": "155993",
+      "total_pv_direct_consumption_energy": "59511"
+    },
+    {
+      "db": "4",
+      "feed_in": "5067",
+      "generation": "29646",
+      "self_consum": "82",
+      "time": "20260705000000",
+      "total_feed_in": "74491",
+      "total_generation": "185639",
+      "total_pv_direct_consumption_energy": "74357"
+    },
+    {
+      "db": "5",
+      "feed_in": "4990",
+      "generation": "23572",
+      "self_consum": "78",
+      "time": "20260706000000",
+      "total_feed_in": "79481",
+      "total_generation": "209211",
+      "total_pv_direct_consumption_energy": "85768"
+    },
+    {
+      "db": "6",
+      "feed_in": "10078",
+      "generation": "35417",
+      "self_consum": "71",
+      "time": "20260707000000",
+      "total_feed_in": "89559",
+      "total_generation": "244628",
+      "total_pv_direct_consumption_energy": "103342"
+    },
+    {
+      "db": "7",
+      "feed_in": "41298",
+      "generation": "66218",
+      "self_consum": "37",
+      "time": "20260708000000",
+      "total_feed_in": "130857",
+      "total_generation": "310846",
+      "total_pv_direct_consumption_energy": "121271"
+    },
+    {
+      "db": "8",
+      "feed_in": "38204",
+      "generation": "65603",
+      "self_consum": "41",
+      "time": "20260709000000",
+      "total_feed_in": "169061",
+      "total_generation": "376449",
+      "total_pv_direct_consumption_energy": "141841"
+    },
+    {
+      "db": "9",
+      "feed_in": "23769",
+      "generation": "56531",
+      "self_consum": "57",
+      "time": "20260710000000",
+      "total_feed_in": "192830",
+      "total_generation": "432980",
+      "total_pv_direct_consumption_energy": "166157"
+    },
+    {
+      "db": "10",
+      "feed_in": "18147",
+      "generation": "53220",
+      "self_consum": "65",
+      "time": "20260711000000",
+      "total_feed_in": "210977",
+      "total_generation": "486200",
+      "total_pv_direct_consumption_energy": "190997"
+    },
+    {
+      "db": "11",
+      "feed_in": "7218",
+      "generation": "47313",
+      "self_consum": "84",
+      "time": "20260712000000",
+      "total_feed_in": "218195",
+      "total_generation": "533513",
+      "total_pv_direct_consumption_energy": "218981"
+    },
+    {
+      "db": "12",
+      "feed_in": "21805",
+      "generation": "56455",
+      "self_consum": "61",
+      "time": "20260713000000",
+      "total_feed_in": "240000",
+      "total_generation": "589968",
+      "total_pv_direct_consumption_energy": "244673"
+    },
+    {
+      "db": "13",
+      "feed_in": "8931",
+      "generation": "42352",
+      "self_consum": "78",
+      "time": "20260714000000",
+      "total_feed_in": "248931",
+      "total_generation": "632320",
+      "total_pv_direct_consumption_energy": "269070"
+    },
+    {
+      "db": "14",
+      "feed_in": "17807",
+      "generation": "44476",
+      "self_consum": "59",
+      "time": "20260715000000",
+      "total_feed_in": "266738",
+      "total_generation": "676796",
+      "total_pv_direct_consumption_energy": "287073"
+    },
+    {
+      "db": "15",
+      "feed_in": "17512",
+      "generation": "50538",
+      "self_consum": "65",
+      "time": "20260716000000",
+      "total_feed_in": "284250",
+      "total_generation": "727334",
+      "total_pv_direct_consumption_energy": "310391"
+    },
+    {
+      "db": "16",
+      "feed_in": "2956",
+      "generation": "35740",
+      "self_consum": "91",
+      "time": "20260717000000",
+      "total_feed_in": "287206",
+      "total_generation": "763074",
+      "total_pv_direct_consumption_energy": "335803"
+    },
+    {
+      "db": "17",
+      "feed_in": "17699",
+      "generation": "46893",
+      "self_consum": "62",
+      "time": "20260718000000",
+      "total_feed_in": "304905",
+      "total_generation": "809967",
+      "total_pv_direct_consumption_energy": "355479"
+    },
+    {
+      "db": "18",
+      "feed_in": "3372",
+      "generation": "25670",
+      "self_consum": "86",
+      "time": "20260719000000",
+      "total_feed_in": "308277",
+      "total_generation": "835637",
+      "total_pv_direct_consumption_energy": "369036"
+    },
+    {
+      "db": "19",
+      "feed_in": "9056",
+      "generation": "33767",
+      "self_consum": "73",
+      "time": "20260720000000",
+      "total_feed_in": "317333",
+      "total_generation": "869404",
+      "total_pv_direct_consumption_energy": "384876"
+    },
+    {
+      "db": "20",
+      "feed_in": "19963",
+      "generation": "39666",
+      "self_consum": "49",
+      "time": "20260721000000",
+      "total_feed_in": "337296",
+      "total_generation": "909070",
+      "total_pv_direct_consumption_energy": "396459"
+    }
+  ],
+  "m_timeFrom": "20260701000000",
+  "m_timeTo": "20260731224500"
+}

@@ -1,0 +1,56 @@
+{
+  "backupmode": "",
+  "direction": {
+    "is_battery_charging_": "0",
+    "is_battery_discharging_": "0",
+    "is_charging_from_grid_": "0",
+    "is_direct_consuming_": "1",
+    "is_discharging_to_grid_": "0",
+    "is_grid_buying_": "0",
+    "is_grid_selling_": "1"
+  },
+  "evcharger": {
+    "auth_method": "off",
+    "authentication": "false",
+    "ev_activate": "off",
+    "ev_power": "0",
+    "evcharger_detected": "off"
+  },
+  "gridWaitingTime": "0",
+  "heatpump": {
+    "current_temp": "0",
+    "heatpump_activate": "off",
+    "heatpump_protocol": "0",
+    "heatpump_working": "off"
+  },
+  "operation": {
+    "drm_control": "255",
+    "drm_mode0": "0",
+    "mode": "1",
+    "pcs_standbymode": "false",
+    "remote_mode": "0",
+    "status": "start"
+  },
+  "pcs_fault": {
+    "pcs_op_status": "pcs_run",
+    "pcs_status": "pcs_ok"
+  },
+  "statistics": {
+    "ac_output_power": "10",
+    "bat_status": "0",
+    "bat_use": "1",
+    "bat_user_soc": "100.0",
+    "batconv_power": "0",
+    "current_day_self_consumption": "49.7",
+    "current_grid_feed_in_energy": "19963",
+    "current_pv_generation_sum": "39666",
+    "grid_power": "4699",
+    "load_power": "1035",
+    "load_today": "0.0",
+    "pcs_pv_total_power": "5734"
+  },
+  "wintermode": {
+    "backup_status": "off",
+    "winter_status": "off"
+  }
+}

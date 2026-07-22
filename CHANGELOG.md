@@ -1,40 +1,40 @@
 # Changelog
 
-Alle wesentlichen Änderungen an diesem Projekt werden in dieser Datei dokumentiert.
+All notable changes to this project are documented in this file.
 
-## [0.2.0] - 2026-07-17
+## [0.2.0] - 2026-07-21
 
 ### Added
-- Erste lauffähige Home-Assistant-Integration für LG ESS.
-- Config Flow zur Einrichtung über die Benutzeroberfläche.
-- Lokale Kommunikation mit dem ESS.
-- Automatische Geräteerkennung.
-- Live-Sensoren:
-  - Battery Power
-  - Battery SoC
-  - Battery Status
-  - Grid Export
-  - Grid Import
-  - Grid Power
-  - Home Load
-  - PV Power
-- Deutsche und englische Übersetzungen.
-- Geräteinformationen und Diagnoseschnittstelle.
-- Grundlegende Testumgebung.
+- Local Home Assistant integration for LG ESS.
+- Config Flow for UI-based setup.
+- Automatic device creation.
+- Diagnostics support.
+- English and German translations.
+- Home Assistant Energy Dashboard support.
+- Day, Week, Month and Year energy statistics.
+- New graph API support for:
+  - Day
+  - Week
+  - Month
+  - Year
+- New energy sensors for:
+  - PV Generation
+  - Direct Consumption
+  - Grid Feed-In
+- New `battery_power_flow` sensor for Power Flow Card Plus.
 
 ### Changed
-- Projektstruktur für HACS und GitHub vorbereitet.
-- Dokumentation überarbeitet.
-- Entity- und Geräteverwaltung bereinigt.
-- Verbesserte Parser- und Coordinator-Struktur.
+- Extended API, parser, models and coordinator for historical energy data.
+- Improved sensor structure and entity handling.
+- Updated documentation for version 0.2.0.
 
 ### Fixed
-- Korrekte Gerätezuordnung der Entitäten.
-- Unterstützung für Dataclasses mit `slots=True`.
-- Diverse kleinere Fehler im Config Flow und in der Diagnosefunktion.
+- Correct battery power direction for Power Flow Card Plus using a dedicated flow sensor.
+- Various parser and coordinator improvements.
+- Minor stability and logging fixes.
 
 ## [0.1.0] - 2026-07-16
 
 ### Added
-- Erster interner Prototyp.
-- Grundlegende Kommunikation mit dem LG ESS.
+- Initial prototype.
+- Local communication with LG ESS.

@@ -16,19 +16,31 @@ No cloud account is required. Communication takes place directly with the LG ESS
 - Diagnostics support
 - English and German translations
 - HACS ready
+- Home Assistant Energy Dashboard support
+- Day / Week / Month / Year energy statistics
+- Power Flow Card Plus support
 
 ---
 
 ## Supported sensors
 
+### Live sensors
+
 - Battery SoC
 - Battery Power
+- Battery Power Flow
 - Battery Status
 - PV Power
 - Home Load
 - Grid Power
 - Grid Import
 - Grid Export
+
+### Energy statistics
+
+- PV Generation (Day / Week / Month / Year)
+- Direct Consumption (Day / Week / Month / Year)
+- Grid Feed-In (Day / Week / Month / Year)
 
 ---
 
@@ -78,23 +90,25 @@ Support is planned.
 
 ---
 
+## Power Flow Card Plus
+
+For the battery entity use:
+
+```
+sensor.lg_ess_battery_power_flow
+```
+
+This sensor uses the sign convention expected by Power Flow Card Plus.
+The original `sensor.lg_ess_battery_power` sensor remains unchanged and
+provides the raw battery power reported by the LG ESS.
+
+---
+
 ## Roadmap
-
-### Version 0.2.x
-
-- Stable local integration
-- Improved diagnostics
-- Better logging
-- Energy Dashboard support
 
 ### Version 0.3.x
 
 - Additional LG ESS sensors
-- Battery charge/discharge entities
-- Daily energy statistics
-
-### Version 0.4.x
-
 - Services for ESS control (if supported)
 
 ### Version 1.0

@@ -106,3 +106,30 @@ class LGESSApi:
             "/v1/user/graph/pv/day",
             {"year_month_day": day.strftime("%Y%m%d")},
         )
+
+    async def async_get_graph_week(
+        self,
+        day: date,
+    ) -> dict[str, Any]:
+        return await self._request(
+            "/v1/user/graph/pv/week",
+            {"year_month_day": day.strftime("%Y%m%d")},
+        )
+
+    async def async_get_graph_month(
+        self,
+        day: date,
+    ) -> dict[str, Any]:
+        return await self._request(
+            "/v1/user/graph/pv/month",
+            {"year_month": day.strftime("%Y%m")},
+        )
+
+    async def async_get_graph_year(
+        self,
+        day: date,
+    ) -> dict[str, Any]:
+        return await self._request(
+            "/v1/user/graph/pv/year",
+            {"year": day.strftime("%Y")},
+        )

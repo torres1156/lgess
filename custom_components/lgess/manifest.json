@@ -6,6 +6,9 @@
   ],
   "config_flow": true,
   "dependencies": [],
+  "after_dependencies": [
+    "energy"
+  ],
   "documentation": "https://github.com/torstenschlosser/lgess",
   "integration_type": "hub",
   "iot_class": "local_polling",
@@ -14,5 +17,5 @@
     "custom_components.lgess"
   ],
   "requirements": [],
-  "version": "0.1.0"
+  "version": "0.2.0"
 }

@@ -4,6 +4,7 @@ from __future__ import annotations
 
 from dataclasses import dataclass
 from typing import Any
+from datetime import datetime
 
 
 @dataclass(slots=True)
@@ -92,6 +93,41 @@ class LGESSData:
         return power
 
     @property
+    def soc(self) -> float:
+        """Battery state of charge (%)."""
+        return self.energy("bat_user_soc")
+
+    @property
+    def pv_power(self) -> int:
+        """Current PV power (W)."""
+        return self.power("pcs_pv_total_power")
+
+    @property
+    def load_power(self) -> int:
+        """Current house load (W)."""
+        return self.power("load_power")
+
+    @property
+    def grid_power(self) -> int:
+        """Current grid power (W)."""
+        return self.power("grid_power")
+
+    @property
+    def pv_generation_today(self) -> float:
+        """Today's PV generation."""
+        return self.energy("current_pv_generation_sum")
+
+    @property
+    def pv_feed_in_today(self) -> float:
+        """Today's grid feed-in."""
+        return self.energy("current_grid_feed_in_energy")
+
+    @property
+    def pv_direct_consumption_today(self) -> float:
+        """Today's direct self-consumption."""
+        return self.energy("current_day_self_consumption")
+
+    @property
     def grid_import(self) -> int:
         """Return grid import power."""
 
@@ -108,3 +144,44 @@ class LGESSData:
             return self.power("grid_power")
 
         return 0
+
+
+@dataclass(slots=True)
+class LGESSGraphPoint:
+    """Ein 15-Minuten-Datenpunkt der PV-Tageshistorie."""
+
+    time: datetime
+    generation: int
+    feed_in: int
+    self_consumption: float
+    total_generation: int
+    total_feed_in: int
+    total_direct_consumption: int
+
+
+@dataclass(slots=True)
+class LGESSGraphDay:
+    """PV-Tageshistorie."""
+
+    points: list[LGESSGraphPoint]
+
+
+@dataclass(slots=True)
+class LGESSGraphWeek:
+    """PV-Wochenhistorie."""
+
+    points: list[LGESSGraphPoint]
+
+
+@dataclass(slots=True)
+class LGESSGraphMonth:
+    """PV-Monatshistorie."""
+
+    points: list[LGESSGraphPoint]
+
+
+@dataclass(slots=True)
+class LGESSGraphYear:
+    """PV-Jahreshistorie."""
+
+    points: list[LGESSGraphPoint]
